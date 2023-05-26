@@ -12,8 +12,32 @@ body{
 }
 header{
     background: linear-gradient(to right, #74ebd5, #acb6e5);
-    /* position: fixed;
-    width: 1100px; */
+}
+h1 a{
+    text-decoration: none; 
+    color: black;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+
+    &::before {
+        content: attr(data-item);
+        transition: all 1s ease-in-out;
+        color: #6c42e1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+      }
+    
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
 }
 .header-style{
     padding-top:30px;
@@ -35,8 +59,42 @@ nav a{
     text-decoration-line: none;
     text-align: center;
     align-self: center;
+    z-index: 1;
+    text-transform: uppercase;
+    cursor: pointer;
     flex:1;
 }
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+  }
+  a:nth-child(1) {
+    width: 400px;
+  }
+  a:nth-child(2) {
+    width: 210px;
+  }
+  a:nth-child(3) {
+    width: 200px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 400px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-services, a:nth-child(2):hover~.animation {
+    width: 400x;
+    left: 400px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 400px;
+    left: 800px;
+    background-color: #3498db;
+  }
 .personal-info-container{
     margin-top: 30px;
     margin-bottom: 30px;
