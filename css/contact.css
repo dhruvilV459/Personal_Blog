@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+.header-style {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+}
+
+nav {
+    display: inline-flex;
+    background-color: black;
+    height: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration-line: none;
+    text-align: center;
+    align-self: center;
+    z-index: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex: 1;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+}
+
+a:nth-child(1) {
+    width: 400px;
+}
+
+a:nth-child(2) {
+    width: 400px;
+}
+
+a:nth-child(3) {
+    width: 400px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+    width: 400px;
+    left: 0px;
+    background-color: #1abc9c;
+}
+
+nav .start-services, a:nth-child(2):hover~.animation {
+	width: 400px;
+	left: 400px;
+	background-color: #e74c3c;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+    width: 400px;
+    left: 800px;
+    background-color: #3498db;
+}
+.footer {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    margin-top: 30px;
+    padding: 10px;
+    clear: both;
+}
