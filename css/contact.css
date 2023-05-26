@@ -12,6 +12,33 @@ body {
     margin: 0 auto;
 }
 
+h1 a{
+    text-decoration: none; 
+    color: black;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+
+    &::before {
+        content: attr(data-item);
+        transition: all 1s ease-in-out;
+        color: #6c42e1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+      }
+    
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+}
+
 header {
     background: linear-gradient(to right, #74ebd5, #acb6e5);
 }

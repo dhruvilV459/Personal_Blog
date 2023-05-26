@@ -52,8 +52,11 @@ nav{
     position: relative; 
     align-items: center;
     justify-content: center;
-    width: 1200px;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
 }
+
 nav a{
     color: whitesmoke;
     text-decoration-line: none;
@@ -95,6 +98,94 @@ nav .animation {
     left: 800px;
     background-color: #3498db;
   }
+  section{
+    float: left;
+    width: 700px;
+  }
+  aside{
+    float:right; width: 500px; margin-top: 30px;
+  }
+  @media (max-width: 600px) {
+    body{
+        width: auto;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    nav{
+        display:flex; 
+        flex-direction: column;       
+        width: 100%;
+        max-width: 100%;
+        z-index: 10;
+        height: auto;
+        position: relative;
+    }
+    nav a {
+      font-size: 12px;
+    }
+
+    a:nth-child(1) {
+      width: auto;
+    }
+
+    a:nth-child(2) {
+      width: auto;
+    }
+
+    a:nth-child(3) {
+      width: auto;
+    }
+
+    nav .start-home, a:nth-child(1):hover~.animation {
+      width: auto;
+      left: 0;
+    }
+
+    nav .start-services, a:nth-child(2):hover~.animation {
+        width: auto;
+        left: 100%;
+    }
+
+    nav .start-blog, a:nth-child(3):hover~.animation {
+        width: auto;
+        left: 200%;
+    }
+    section{
+        width: auto;
+        margin:auto;
+    }
+    aside{
+        width: auto; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .aside-sub-container{
+        margin-right: auto;
+        float: left;
+    }
+    ul{
+        margin-left:auto;
+        margin-top: 10px;
+    }
+    .personal-info-container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding:10px;
+        max-height: 300px;
+        overflow: auto;
+        background-color: coral;
+        width: auto;
+    }
+  }
+ul{
+    margin-left:15px;margin-top: 10px;
+}
+.aside-sub-container{
+    float: right; margin-right: 50px;
+}
+
 .personal-info-container{
     margin-top: 30px;
     margin-bottom: 30px;
