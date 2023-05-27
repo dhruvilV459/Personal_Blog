@@ -116,3 +116,52 @@ a:nth-child(3):hover~.animation {
     padding: 10px;
     clear: both;
 }
+
+@media (max-width: 600px) {
+    body{
+        width: auto;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    nav{
+        display:flex; 
+        flex-direction: column;       
+        width: 100%;
+        max-width: 100%;
+        z-index: 10;
+        height: auto;
+        position: relative;
+    }
+    nav a {
+      font-size: 12px;
+    }
+
+    a:nth-child(1) {
+      width: auto;
+    }
+
+    a:nth-child(2) {
+      width: auto;
+    }
+
+    a:nth-child(3) {
+      width: auto;
+    }
+
+    nav .start-home, a:nth-child(1):hover~.animation {
+      width: auto;
+      left: 0;
+    }
+
+    nav .start-services, a:nth-child(2):hover~.animation {
+        width: auto;
+        left: 100%;
+    }
+
+    nav .start-blog, a:nth-child(3):hover~.animation {
+        width: auto;
+        left: 200%;
+    }
+}
